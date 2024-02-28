@@ -7,20 +7,15 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {
-
     path: '',
     component: CitiesComponent,
-    children: [
-    ]
-    
+    children: []
   },
   { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes)],
+  imports: [CommonModule, RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

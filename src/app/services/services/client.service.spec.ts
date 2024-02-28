@@ -1,5 +1,8 @@
 import { TestBed, inject } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {
+  HttpClientTestingModule,
+  HttpTestingController
+} from '@angular/common/http/testing';
 import { ClientService } from './client.service';
 import { City } from '../../model/City';
 
@@ -26,7 +29,7 @@ describe('ClientService', () => {
 
   it('should fetch cities successfully', () => {
     const mockCities: City[] = [
-      { 
+      {
         name: 'City 1',
         name_native: 'Native City 1',
         country: 'Country 1',
@@ -37,7 +40,7 @@ describe('ClientService', () => {
         founded: '2000',
         landmarks: ['Landmark 1', 'Landmark 2']
       },
-      { 
+      {
         name: 'City 2',
         name_native: 'Native City 2',
         country: 'Country 2',
@@ -61,10 +64,10 @@ describe('ClientService', () => {
 
   it('should handle errors', () => {
     const errorMessage = 'Error fetching cities';
-    
+
     service.getCities().subscribe(
       () => fail('expected an error, not cities'),
-      error => expect(error).toEqual(errorMessage)
+      (error) => expect(error).toEqual(errorMessage)
     );
 
     const req = httpMock.expectOne(service.citiesUrl);

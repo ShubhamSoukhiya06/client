@@ -29,7 +29,7 @@ describe('CitiesComponent', () => {
 
   it('should fetch cities on init', () => {
     const mockCities: City[] = [
-      { 
+      {
         name: 'City 1',
         name_native: 'Native City 1',
         country: 'Country 1',
@@ -40,7 +40,7 @@ describe('CitiesComponent', () => {
         founded: '2000',
         landmarks: ['Landmark 1', 'Landmark 2']
       },
-      { 
+      {
         name: 'City 2',
         name_native: 'Native City 2',
         country: 'Country 2',
@@ -63,7 +63,7 @@ describe('CitiesComponent', () => {
   it('should initialize map', () => {
     spyOn(component, 'initializeMap');
     const mockCities: City[] = [
-      { 
+      {
         name: 'City 1',
         name_native: 'Native City 1',
         country: 'Country 1',
@@ -74,7 +74,7 @@ describe('CitiesComponent', () => {
         founded: '2000',
         landmarks: ['Landmark 1', 'Landmark 2']
       },
-      { 
+      {
         name: 'City 2',
         name_native: 'Native City 2',
         country: 'Country 2',
@@ -96,7 +96,7 @@ describe('CitiesComponent', () => {
   it('should add markers to the map', () => {
     spyOn(component, 'addMarkers');
     const mockCities: City[] = [
-      { 
+      {
         name: 'City 1',
         name_native: 'Native City 1',
         country: 'Country 1',
@@ -107,7 +107,7 @@ describe('CitiesComponent', () => {
         founded: '2000',
         landmarks: ['Landmark 1', 'Landmark 2']
       },
-      { 
+      {
         name: 'City 2',
         name_native: 'Native City 2',
         country: 'Country 2',
