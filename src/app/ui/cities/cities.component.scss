@@ -1,0 +1,19 @@
+html {
+  height: 100vh;
+  margin-left: 2%;
+}
+
+.map-container {
+    position: relative;
+    height: 60vh;
+    width: 50vw;
+  }
+  
+  .map-frame {
+    border: 2px solid black;
+    height: 100%;
+  }
+  
+  #leaflet {
+    height: 100%;
+  }
